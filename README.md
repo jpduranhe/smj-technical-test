@@ -43,6 +43,14 @@ password = password
 
 ##  Utilizar 🚀
 
+Al cargar la aplicación se crean un usuario por defecto, el cual se puede utilizar para obtener el token de autenticación.
+
+```properties
+ email  admin@mail.com
+ clave  Abc123dF
+```
+    
+
 ### Opción 1
 Probar el servicio mediante una collection de postman que se encuentra en la carpeta postman, la cual tiene la posibilidad de obtener el token para utilizar los endpoint, que esta protegido por jwt.
 
