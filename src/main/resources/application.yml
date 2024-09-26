@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: test
+  security:
+    jwt:
+      secret-key: 60661752c1204664a8516c319627a9c601922addf98d70ac81d2966be018b5d9
+      expiration-time: 86400000
+      refresh-token:
+        expiration-time: 86400000
+  h2:
+    console:
+      enabled: true
+      settings.trace: false
+      settings.web-allow-others: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+      format.date: yyyy-MM-dd
+      format.date-time: yyyy-MM-dd HH:mm:ss
+      format.time: HH:mm:ss
+  jackson:
+    default-property-inclusion: non_null
+  jpa:
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        show_sql: true
+        format_sql: true
+  datasource:
+      url: jdbc:h2:mem:testdb
+      driverClassName: org.h2.Driver
+      username: sa
+      password: password
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        orm:
+          jdbc:
+            bind: TRACE
+
+
+
+
+
+
